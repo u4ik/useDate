@@ -6,10 +6,12 @@
 <img src='https://img.shields.io/npm/l/usedate.svg?style=flat'>
 </div>
 <div style="background: lightgrey; border-radius:10px">
+```
 <h2 style="color:black" align=center> npm i usedate </h2>
 <h2 style="color:black" align=center> import useDate from "usedate" </h2>
 <h3 style="color:black" align=center>OR</h3>
 <h2 style="color:black" align=center> const useDate = require("usedate") </h2>
+```
 </div>
 
 <h2 align=center> useDate("mn/dd/yyyy")</h2>
