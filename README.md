@@ -1,8 +1,9 @@
 
 <div  align=center>
 
-<h1  align=center> 📅</br> useDate()</h1>
+<h1  align=center> 📅</h1>
 
+<h1  align=center> useDate()</h1>
 
 <img  src='https://img.shields.io/npm/v/usedate.svg?style=flat'>
 
