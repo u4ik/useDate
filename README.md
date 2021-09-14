@@ -1,9 +1,8 @@
 
 <div  align=center>
 
-<h1  align=center> 📅</h1>
+<h1  align=center> 📅</br> useDate()</h1>
 
-<h1  align=center> useDate()</h1>
 
 <img  src='https://img.shields.io/npm/v/usedate.svg?style=flat'>
 
@@ -12,6 +11,8 @@
 <img  src='https://img.shields.io/npm/l/usedate.svg?style=flat'>
 
 </div>
+
+
 
 <div  style=" border-radius:10px">
 <h3 >Install</h3> 
