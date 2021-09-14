@@ -1,6 +1,6 @@
 {
     "name": "usedate",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "Allows you to display the date in a nice format.",
     "main": "index.js",
     "scripts": {
@@ -25,5 +25,4 @@
         "neatdate",
         "formatdate"
     ]
-
 }
