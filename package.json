@@ -23,6 +23,7 @@
         "u4ik",
         "dateformat",
         "neatdate",
-        "formatdate"
+        "formatdate",
+        "nicedate"
     ]
 }
