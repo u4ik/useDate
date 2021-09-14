@@ -1,9 +1,3 @@
-
-<style type="text/css" rel="stylesheet">
-h1 { border: none; }
-</style>
-
-
 <div  align=center>
 
 <h1  align=center > 📅</h1>
