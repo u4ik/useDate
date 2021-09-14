@@ -11,7 +11,6 @@
 <h3 style="color:black" align=center>OR</h3>
 <h2 style="color:black" align=center> const useDate = require("usedate") </h2>
 </div>
-<hr>
 
 <h2 align=center> useDate("mn/dd/yyyy")</h2>
 <h3 align=center> Jun/02/2021</h3>
