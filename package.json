@@ -15,5 +15,15 @@
     "bugs": {
         "url": "https://github.com/u4ik/useDate/issues"
     },
-    "homepage": "https://github.com/u4ik/useDate/blob/main/README.md"
+    "homepage": "https://github.com/u4ik/useDate/blob/main/README.md",
+    "keywords": [
+        "usedate",
+        "npm",
+        "package",
+        "u4ik",
+        "dateformat",
+        "neatdate",
+        "formatdate"
+    ]
+
 }
