@@ -4,7 +4,6 @@
 <img src='https://img.shields.io/npm/v/usedate.svg?style=flat'>
 <img src='https://img.shields.io/npm/dt/usedate.svg?style=flat'>
 <img src='https://img.shields.io/npm/l/usedate.svg?style=flat'>
-
 </div>
 <div style="background: lightgrey; border-radius:10px">
 <h2 style="color:black" align=center> npm i usedate </h2>
