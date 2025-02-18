@@ -34,12 +34,17 @@ const useDate = require("usedate");
 
 ## Formats & Examples
 
+### `useDate("mn dd yyyy")`
+**Output:** `Jun 02 2021`
+
+---
+
 ### `useDate("mn/dd/yyyy")`
 **Output:** `Jun/02/2021`
 
 ---
 
-### `useDate("mn/dd/yyyy", "-")` (Optional separators)
+### `useDate("mn-dd-yyyy")`
 **Output:** `Jun-02-2021`
 
 ---
@@ -65,7 +70,7 @@ const useDate = require("usedate");
 ---
 
 ### `useDate("mn-dn-yyyy")`
-**Output:** `Jun-Wednesday the 2nd-2021`
+**Output:** `Jun-Wednesday-2021`
 
 ---
 
@@ -94,13 +99,33 @@ const useDate = require("usedate");
 
 ---
 
-### `useDate("lmn/dd/yyyy")`
-**Output:** `June/02/2021`
+### `useDate("fmn dd yyyy")`
+**Output:** `June 02 2021`
 
 ---
 
-### `useDate("lmn-dn-yyyy")`
-**Output:** `June-Wednesday the 2nd-2021`
+### `useDate("fmn, fdn do yyyy")`
+**Output:** `Wednesday, June 2nd 2021`
+
+---
+
+### `useDate("fdn, fmn dd yyyy")`
+**Output:** `Wednesday, June 02 2021`
+
+---
+
+### `useDate("fdn, fmn do yyyy")`
+**Output:** `Wednesday, June 2nd 2021`
+
+---
+
+### `useDate("fdn, m/d/yyyy")`
+**Output:** `Wednesday, 6/2/2021`
+
+---
+
+### `useDate("fdn, fmn dd, yyyy")`
+**Output:** `Wednesday, June 02, 2021`
 
 ---
 
@@ -110,5 +135,4 @@ const useDate = require("usedate");
 ---
 
 ### Invalid Input (`useDate(123)`)
-**Output:** `Invalid Format`
-
+**Output:** `Error: "Invalid Format"`
