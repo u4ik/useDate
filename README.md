@@ -1,96 +1,114 @@
-<div  align=center>
+<div align="center">
 
-<h1  align=center > 📅</h1>
+# 📅
 
-<h1  align=center> useDate()</h1>
+# useDate()
 
-<img  src='https://img.shields.io/npm/v/usedate.svg?style=flat'>
-
-<img  src='https://img.shields.io/npm/dt/usedate.svg?style=flat'>
-
-<img  src='https://img.shields.io/npm/l/usedate.svg?style=flat'>
+![npm version](https://img.shields.io/npm/v/usedate.svg?style=flat)
+![npm downloads](https://img.shields.io/npm/dt/usedate.svg?style=flat)
+![npm license](https://img.shields.io/npm/l/usedate.svg?style=flat)
 
 </div>
 
+---
 
+## Install
 
-<div  style=" border-radius:10px">
-<h3 >Install</h3> 
-
-```js
+```sh
 npm i usedate
 ```
 
-<h3>Usage</h3>
-
+## Usage
 
 ```js
 import useDate from "usedate";
 ```
- <h3>OR</h3>
+
+### OR
 
 ```js
 const useDate = require("usedate");
 ```
-</div>
-<h2 align=center> useDate("mn/dd/yyyy")</h2>
 
-<h3 align=center> Jun/02/2021</h3>
+---
 
-<hr>
+## Formats & Examples
 
-  
+### `useDate("mn/dd/yyyy")`
+**Output:** `Jun/02/2021`
 
-<h2 align=center> useDate("mn/dd/yyyy", "-") Optional dashes</h2>
+---
 
-<h3 align=center> Jun-02-2021 </h3>
+### `useDate("mn/dd/yyyy", "-")` (Optional separators)
+**Output:** `Jun-02-2021`
 
-  
+---
 
-<hr>
+### `useDate("mm/dd/yyyy")`
+**Output:** `06/02/2021`
 
-  
+---
 
-<h2 align=center> useDate("mm/dd/yyyy")</h2>
+### `useDate("m/dd/yyyy")`
+**Output:** `6/02/2021`
 
-<h3 align=center> 06/02/2021 </h3>
+---
 
-<hr>
+### `useDate("m/d/yyyy")`
+**Output:** `6/2/2021`
 
-  
+---
 
-<h2 align=center>useDate("m/dd/yyyy")</h2>
+### `useDate("m/d/yy")`
+**Output:** `6/2/21`
 
-<h3 align=center> 6/02/2021</h3>
+---
 
-<hr>
+### `useDate("mn-dn-yyyy")`
+**Output:** `Jun-Wednesday the 2nd-2021`
 
-  
+---
 
-<h2 align=center> useDate("m/d/yyyy") </h2>
+### `useDate("mn/dd/yy")`
+**Output:** `Jun/02/21`
 
-<h3 align=center>6/2/2021</h3>
+---
 
-<hr>
+### `useDate("dn, mn dd yyyy")`
+**Output:** `Wednesday, Jun 02 2021`
 
-  
+---
 
-<h2 align=center> useDate("m/d/yy")</h2>
+### `useDate("dn, m/d/yy")`
+**Output:** `Wednesday, 6/2/21`
 
-<h3 align=center> 6/2/21</h3>
+---
 
-<hr>
+### `useDate("yyyy-mm-dd")`
+**Output:** `2021-06-02`
 
-  
+---
 
-<h2 align=center>useDate() - Default
+### `useDate("yy/mm/dd")`
+**Output:** `21/06/02`
 
-<h3 align=center> 6/2/2021</h3>
+---
 
-<hr>
+### `useDate("lmn/dd/yyyy")`
+**Output:** `June/02/2021`
 
-  
+---
 
-<h2 align=center> useDate(123) - Invalid</h2>
+### `useDate("lmn-dn-yyyy")`
+**Output:** `June-Wednesday the 2nd-2021`
 
-<h3 align=center>Invalid Format</h3>
+---
+
+### Default (`useDate()`)
+**Output:** `6/2/2021`
+
+---
+
+### Invalid Input (`useDate(123)`)
+**Output:** `Invalid Format`
+

@@ -1,79 +1,66 @@
-module.exports = function(format, sep = '/') {
-
-    let first;
-    let second;
-    let third;
-    let fourth;
-    let fifth;
-    let sixth;
-    let seventh;
-    let eigth;
-    let ninth;
-    let tenth;
+module.exports = function (format = 'mm/dd/yyyy', sep = '/') {
+    const months = [
+        'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+    ];
+    const fullMonths = [
+        'January', 'February', 'March', 'April', 'May', 'June',
+        'July', 'August', 'September', 'October', 'November', 'December'
+    ];
+    const days = [
+        'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
+    ];
     
-    if (format) {
-        first = format[0]
-        second = format[1]
-        third = format[2]
-        fourth = format[3]
-        fifth = format[4]
-        sixth = format[5]
-        seventh = format[6]
-        eigth = format[7]
-        ninth = format[8]
-        tenth = format[9]
+    const dateObj = new Date();
+    const monthNum = dateObj.getMonth() + 1;
+    const monthName = months[dateObj.getMonth()];
+    const fullMonthName = fullMonths[dateObj.getMonth()];
+    const day = dateObj.getDate();
+    const dayName = days[dateObj.getDay()];
+    const year = dateObj.getFullYear();
+    const shortYear = year.toString().slice(-2);
 
-    };
-    let months = {
-        1: 'Jan',
-        2: 'Feb',
-        3: 'Mar',
-        4: 'Apr',
-        5: 'May',
-        6: 'Jun',
-        7: 'Jul',
-        8: 'Aug',
-        9: 'Sep',
-        10: 'Oct',
-        11: 'Nov',
-        12: 'Dec'
-    };
-
-    let dateObj = new Date();
-    let monthNum = Object.keys(months)[dateObj.getMonth()];
-    let monthName = months[dateObj.getMonth() + 1];
-    let day = String(dateObj.getDate()).padStart(2, '0');
-    let year = dateObj.getFullYear();
-
-    if (format === 'mn/dd/yyyy') {
-        return monthName + sep + day + sep + year;
+    const formattedDay = day < 10 ? `0${day}` : day;
+    const formattedMonthNum = monthNum < 10 ? `0${monthNum}` : monthNum;
+    
+    switch (format) {
+        case 'mn/dd/yyyy':
+            return `${monthName}${sep}${formattedDay}${sep}${year}`;
+        case 'm/dd/yyyy':
+            return `${monthNum}${sep}${formattedDay}${sep}${year}`;
+        case 'mm/dd/yyyy':
+            return `${formattedMonthNum}${sep}${formattedDay}${sep}${year}`;
+        case 'm/d/yyyy':
+            return `${monthNum}${sep}${day}${sep}${year}`;
+        case 'm/d/yy':
+            return `${monthNum}${sep}${day}${sep}${shortYear}`;
+        case 'mn-dn-yyyy':
+            return `${monthName}-${dayName} the ${day}${getOrdinal(day)}-${year}`;
+        case 'mn/dd/yy':
+            return `${monthName}${sep}${formattedDay}${sep}${shortYear}`;
+        case 'dn, mn dd yyyy':
+            return `${dayName}, ${monthName} ${formattedDay} ${year}`;
+        case 'dn, m/d/yy':
+            return `${dayName}, ${monthNum}${sep}${day}${sep}${shortYear}`;
+        case 'yyyy-mm-dd':
+            return `${year}${sep}${formattedMonthNum}${sep}${formattedDay}`;
+        case 'yy/mm/dd':
+            return `${shortYear}${sep}${formattedMonthNum}${sep}${formattedDay}`;
+        case 'lmn/dd/yyyy':
+            return `${fullMonthName}${sep}${formattedDay}${sep}${year}`;
+        case 'lmn-dn-yyyy':
+            return `${fullMonthName}-${dayName} the ${day}${getOrdinal(day)}-${year}`;
+        default:
+            return 'Invalid Format';
     }
-    else if (format === 'm/dd/yyyy') {
-        return monthNum + sep + day + sep + year;
-    } else if (format === 'mm/dd/yyyy') {
-        if (parseInt(monthNum) < 10) {
-            monthNum = '0' + Object.keys(months)[dateObj.getMonth()];
-        };
-        return monthNum + sep + day + sep + year;
-    } else if (format === 'm/d/yyyy') {
-        if (parseInt(day) < 10) {
-            day = String(dateObj.getDate()).padStart(2, '');
-        };
-        return monthNum + sep + day + sep + year;
-    } else if (format === 'm/d/yy') {
-        let shortYear;
-        if (parseInt(day) < 10) {
-            day = String(dateObj.getDate()).padStart(2, '');
-        };
-        shortYear = String(year)[2] + String(year)[3];
-        return monthNum + sep + day + sep + shortYear;
-    } else if (format === '' || format === undefined || format === null) {
-        if (parseInt(day) < 10) {
-            day = String(dateObj.getDate()).padStart(2, '');
-        };
-        return monthNum + sep + day + sep + year;
-    } else {
-        return 'Invalid Format'
-    };
-
 };
+
+function getOrdinal(n) {
+    if (n >= 11 && n <= 13) return 'th';
+    switch (n % 10) {
+        case 1: return 'st';
+        case 2: return 'nd';
+        case 3: return 'rd';
+        default: return 'th';
+    }
+}
