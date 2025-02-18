@@ -1,3 +1,28 @@
+/**
+ * Formats the current date based on the provided format string.
+ *
+ * @param {string} format - The desired format (e.g., "mn/dd/yyyy", "m/d/yy").
+ * @param {string} [separator="/"] - Optional separator (default is "/").
+ * @returns {string} - The formatted date.
+ *
+ * @example
+ * useDate("mn/dd/yyyy"); // "Jun/02/2021"
+ *
+ * @example
+ * useDate("mm/dd/yyyy"); // "06/02/2021"
+ *
+ * @example
+ * useDate("m/d/yy"); // "6/2/21"
+ *
+ * @example
+ * useDate("yyyy-mm-dd"); // "2021-06-02"
+ *
+ * @example
+ * useDate("dn, mn dd yyyy"); // "Wednesday, Jun 02 2021"
+ *
+ * @example
+ * useDate(123); // "Invalid Format"
+ */  
 module.exports = function (format = 'mm/dd/yyyy', sep = '/') {
     const months = [
         'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
