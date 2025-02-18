@@ -1,6 +1,6 @@
 {
     "name": "usedate",
-    "version": "1.3.0",
+    "version": "2.0.0",
     "description": "Allows you to display the date in a nice format.",
     "main": "index.js",
     "scripts": {
